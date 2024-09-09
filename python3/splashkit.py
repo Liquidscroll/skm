@@ -2326,10 +2326,10 @@ sklib.__sklib__interface_enabled.argtypes = [  ]
 sklib.__sklib__interface_enabled.restype = c_bool
 sklib.__sklib__interface_style_panel__rectangle_ref.argtypes = [ _sklib_rectangle ]
 sklib.__sklib__interface_style_panel__rectangle_ref.restype = None
-sklib.__sklib__label__string_ref.argtypes = [ _sklib_string ]
-sklib.__sklib__label__string_ref.restype = None
-sklib.__sklib__label__string_ref__rectangle_ref.argtypes = [ _sklib_string, _sklib_rectangle ]
-sklib.__sklib__label__string_ref__rectangle_ref.restype = None
+sklib.__sklib__label_element__string_ref.argtypes = [ _sklib_string ]
+sklib.__sklib__label_element__string_ref.restype = None
+sklib.__sklib__label_element__string_ref__rectangle_ref.argtypes = [ _sklib_string, _sklib_rectangle ]
+sklib.__sklib__label_element__string_ref__rectangle_ref.restype = None
 sklib.__sklib__last_element_changed.argtypes = [  ]
 sklib.__sklib__last_element_changed.restype = c_bool
 sklib.__sklib__last_element_confirmed.argtypes = [  ]
@@ -5791,16 +5791,16 @@ def bitmap_button_with_options ( bmp, opts ):
     __skparam__opts = __skadapter__to_sklib_drawing_options(opts)
     __skreturn = sklib.__sklib__bitmap_button__bitmap__drawing_options(__skparam__bmp, __skparam__opts)
     return __skadapter__to_bool(__skreturn)
-def bitmap_button_labeled ( label, bmp ):
-    __skparam__label = __skadapter__to_sklib_string(label)
+def bitmap_button_labeled ( label_text, bmp ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
     __skparam__bmp = __skadapter__to_sklib_bitmap(bmp)
-    __skreturn = sklib.__sklib__bitmap_button__string_ref__bitmap(__skparam__label, __skparam__bmp)
+    __skreturn = sklib.__sklib__bitmap_button__string_ref__bitmap(__skparam__label_text, __skparam__bmp)
     return __skadapter__to_bool(__skreturn)
-def bitmap_button_labeled_with_options ( label, bmp, opts ):
-    __skparam__label = __skadapter__to_sklib_string(label)
+def bitmap_button_labeled_with_options ( label_text, bmp, opts ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
     __skparam__bmp = __skadapter__to_sklib_bitmap(bmp)
     __skparam__opts = __skadapter__to_sklib_drawing_options(opts)
-    __skreturn = sklib.__sklib__bitmap_button__string_ref__bitmap__drawing_options(__skparam__label, __skparam__bmp, __skparam__opts)
+    __skreturn = sklib.__sklib__bitmap_button__string_ref__bitmap__drawing_options(__skparam__label_text, __skparam__bmp, __skparam__opts)
     return __skadapter__to_bool(__skreturn)
 def button_at_position ( text, rect ):
     __skparam__text = __skadapter__to_sklib_string(text)
@@ -5811,10 +5811,10 @@ def button ( text ):
     __skparam__text = __skadapter__to_sklib_string(text)
     __skreturn = sklib.__sklib__button__string_ref(__skparam__text)
     return __skadapter__to_bool(__skreturn)
-def button_labeled ( label, text ):
-    __skparam__label = __skadapter__to_sklib_string(label)
+def button_labeled ( label_text, text ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
     __skparam__text = __skadapter__to_sklib_string(text)
-    __skreturn = sklib.__sklib__button__string_ref__string_ref(__skparam__label, __skparam__text)
+    __skreturn = sklib.__sklib__button__string_ref__string_ref(__skparam__label_text, __skparam__text)
     return __skadapter__to_bool(__skreturn)
 def checkbox_at_position ( text, value, rect ):
     __skparam__text = __skadapter__to_sklib_string(text)
@@ -5827,11 +5827,11 @@ def checkbox ( text, value ):
     __skparam__value = __skadapter__to_sklib_bool(value)
     __skreturn = sklib.__sklib__checkbox__string_ref__bool_ref(__skparam__text, __skparam__value)
     return __skadapter__to_bool(__skreturn)
-def checkbox_labeled ( label, text, value ):
-    __skparam__label = __skadapter__to_sklib_string(label)
+def checkbox_labeled ( label_text, text, value ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
     __skparam__text = __skadapter__to_sklib_string(text)
     __skparam__value = __skadapter__to_sklib_bool(value)
-    __skreturn = sklib.__sklib__checkbox__string_ref__string_ref__bool_ref(__skparam__label, __skparam__text, __skparam__value)
+    __skreturn = sklib.__sklib__checkbox__string_ref__string_ref__bool_ref(__skparam__label_text, __skparam__text, __skparam__value)
     return __skadapter__to_bool(__skreturn)
 def color_slider_at_position ( clr, rect ):
     __skparam__clr = __skadapter__to_sklib_color(clr)
@@ -5842,10 +5842,10 @@ def color_slider ( clr ):
     __skparam__clr = __skadapter__to_sklib_color(clr)
     __skreturn = sklib.__sklib__color_slider__color_ref(__skparam__clr)
     return __skadapter__to_color(__skreturn)
-def color_slider_labeled ( label, clr ):
-    __skparam__label = __skadapter__to_sklib_string(label)
+def color_slider_labeled ( label_text, clr ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
     __skparam__clr = __skadapter__to_sklib_color(clr)
-    __skreturn = sklib.__sklib__color_slider__string_ref__color_ref(__skparam__label, __skparam__clr)
+    __skreturn = sklib.__sklib__color_slider__string_ref__color_ref(__skparam__label_text, __skparam__clr)
     return __skadapter__to_color(__skreturn)
 def disable_interface (  ):
     sklib.__sklib__disable_interface()
@@ -5862,17 +5862,17 @@ def end_panel ( name ):
 def end_popup ( name ):
     __skparam__name = __skadapter__to_sklib_string(name)
     sklib.__sklib__end_popup__string_ref(__skparam__name)
-def end_treenode ( label ):
-    __skparam__label = __skadapter__to_sklib_string(label)
-    sklib.__sklib__end_treenode__string_ref(__skparam__label)
+def end_treenode ( label_text ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
+    sklib.__sklib__end_treenode__string_ref(__skparam__label_text)
 def enter_column (  ):
     sklib.__sklib__enter_column()
 def get_interface_label_width (  ):
     __skreturn = sklib.__sklib__get_interface_label_width()
     return __skadapter__to_int(__skreturn)
-def header ( label ):
-    __skparam__label = __skadapter__to_sklib_string(label)
-    __skreturn = sklib.__sklib__header__string_ref(__skparam__label)
+def header ( label_text ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
+    __skreturn = sklib.__sklib__header__string_ref(__skparam__label_text)
     return __skadapter__to_bool(__skreturn)
 def hsb_color_slider_at_position ( clr, rect ):
     __skparam__clr = __skadapter__to_sklib_color(clr)
@@ -5883,10 +5883,10 @@ def hsb_color_slider ( clr ):
     __skparam__clr = __skadapter__to_sklib_color(clr)
     __skreturn = sklib.__sklib__hsb_color_slider__color_ref(__skparam__clr)
     return __skadapter__to_color(__skreturn)
-def hsb_color_slider_labeled ( label, clr ):
-    __skparam__label = __skadapter__to_sklib_string(label)
+def hsb_color_slider_labeled ( label_text, clr ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
     __skparam__clr = __skadapter__to_sklib_color(clr)
-    __skreturn = sklib.__sklib__hsb_color_slider__string_ref__color_ref(__skparam__label, __skparam__clr)
+    __skreturn = sklib.__sklib__hsb_color_slider__string_ref__color_ref(__skparam__label_text, __skparam__clr)
     return __skadapter__to_color(__skreturn)
 def interface_enabled (  ):
     __skreturn = sklib.__sklib__interface_enabled()
@@ -5894,13 +5894,13 @@ def interface_enabled (  ):
 def interface_style_panel ( initial_rectangle ):
     __skparam__initial_rectangle = __skadapter__to_sklib_rectangle(initial_rectangle)
     sklib.__sklib__interface_style_panel__rectangle_ref(__skparam__initial_rectangle)
-def label ( text ):
+def label_element ( text ):
     __skparam__text = __skadapter__to_sklib_string(text)
-    sklib.__sklib__label__string_ref(__skparam__text)
-def label_at_position ( text, rect ):
+    sklib.__sklib__label_element__string_ref(__skparam__text)
+def label_element_at_position ( text, rect ):
     __skparam__text = __skadapter__to_sklib_string(text)
     __skparam__rect = __skadapter__to_sklib_rectangle(rect)
-    sklib.__sklib__label__string_ref__rectangle_ref(__skparam__text, __skparam__rect)
+    sklib.__sklib__label_element__string_ref__rectangle_ref(__skparam__text, __skparam__rect)
 def last_element_changed (  ):
     __skreturn = sklib.__sklib__last_element_changed()
     return __skadapter__to_bool(__skreturn)
@@ -5920,11 +5920,11 @@ def number_box ( value, step ):
     __skparam__step = __skadapter__to_sklib_float(step)
     __skreturn = sklib.__sklib__number_box__float_ref__float(__skparam__value, __skparam__step)
     return __skadapter__to_float(__skreturn)
-def number_box_labeled ( label, value, step ):
-    __skparam__label = __skadapter__to_sklib_string(label)
+def number_box_labeled ( label_text, value, step ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
     __skparam__value = __skadapter__to_sklib_float(value)
     __skparam__step = __skadapter__to_sklib_float(step)
-    __skreturn = sklib.__sklib__number_box__string_ref__float_ref__float(__skparam__label, __skparam__value, __skparam__step)
+    __skreturn = sklib.__sklib__number_box__string_ref__float_ref__float(__skparam__label_text, __skparam__value, __skparam__step)
     return __skadapter__to_float(__skreturn)
 def open_popup ( name ):
     __skparam__name = __skadapter__to_sklib_string(name)
@@ -6018,12 +6018,12 @@ def slider ( value, min_value, max_value ):
     __skparam__max_value = __skadapter__to_sklib_float(max_value)
     __skreturn = sklib.__sklib__slider__float_ref__float__float(__skparam__value, __skparam__min_value, __skparam__max_value)
     return __skadapter__to_float(__skreturn)
-def slider_labeled ( label, value, min_value, max_value ):
-    __skparam__label = __skadapter__to_sklib_string(label)
+def slider_labeled ( label_text, value, min_value, max_value ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
     __skparam__value = __skadapter__to_sklib_float(value)
     __skparam__min_value = __skadapter__to_sklib_float(min_value)
     __skparam__max_value = __skadapter__to_sklib_float(max_value)
-    __skreturn = sklib.__sklib__slider__string_ref__float_ref__float__float(__skparam__label, __skparam__value, __skparam__min_value, __skparam__max_value)
+    __skreturn = sklib.__sklib__slider__string_ref__float_ref__float__float(__skparam__label_text, __skparam__value, __skparam__min_value, __skparam__max_value)
     return __skadapter__to_float(__skreturn)
 def split_into_columns ( count ):
     __skparam__count = __skadapter__to_sklib_int(count)
@@ -6055,9 +6055,9 @@ def start_popup ( name ):
     __skparam__name = __skadapter__to_sklib_string(name)
     __skreturn = sklib.__sklib__start_popup__string_ref(__skparam__name)
     return __skadapter__to_bool(__skreturn)
-def start_treenode ( label ):
-    __skparam__label = __skadapter__to_sklib_string(label)
-    __skreturn = sklib.__sklib__start_treenode__string_ref(__skparam__label)
+def start_treenode ( label_text ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
+    __skreturn = sklib.__sklib__start_treenode__string_ref(__skparam__label_text)
     return __skadapter__to_bool(__skreturn)
 def text_box ( value ):
     __skparam__value = __skadapter__to_sklib_string(value)
@@ -6068,10 +6068,10 @@ def text_box_at_position ( value, rect ):
     __skparam__rect = __skadapter__to_sklib_rectangle(rect)
     __skreturn = sklib.__sklib__text_box__string_ref__rectangle_ref(__skparam__value, __skparam__rect)
     return __skadapter__to_string(__skreturn)
-def text_box_labeled ( label, value ):
-    __skparam__label = __skadapter__to_sklib_string(label)
+def text_box_labeled ( label_text, value ):
+    __skparam__label_text = __skadapter__to_sklib_string(label_text)
     __skparam__value = __skadapter__to_sklib_string(value)
-    __skreturn = sklib.__sklib__text_box__string_ref__string_ref(__skparam__label, __skparam__value)
+    __skreturn = sklib.__sklib__text_box__string_ref__string_ref(__skparam__label_text, __skparam__value)
     return __skadapter__to_string(__skreturn)
 def create_json (  ):
     __skreturn = sklib.__sklib__create_json()

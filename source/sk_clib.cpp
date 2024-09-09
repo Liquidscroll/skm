@@ -2355,17 +2355,17 @@ int __sklib__bitmap_button__bitmap__drawing_options(__sklib_bitmap bmp, __sklib_
     bool __skreturn = bitmap_button(__skparam__bmp, __skparam__opts);
     return __sklib__to_int(__skreturn);
 }
-int __sklib__bitmap_button__string_ref__bitmap(const __sklib_string label, __sklib_bitmap bmp) {
-    string __skparam__label = __sklib__to_string(label);
+int __sklib__bitmap_button__string_ref__bitmap(const __sklib_string label_text, __sklib_bitmap bmp) {
+    string __skparam__label_text = __sklib__to_string(label_text);
     bitmap __skparam__bmp = __sklib__to_bitmap(bmp);
-    bool __skreturn = bitmap_button(__skparam__label, __skparam__bmp);
+    bool __skreturn = bitmap_button(__skparam__label_text, __skparam__bmp);
     return __sklib__to_int(__skreturn);
 }
-int __sklib__bitmap_button__string_ref__bitmap__drawing_options(const __sklib_string label, __sklib_bitmap bmp, __sklib_drawing_options opts) {
-    string __skparam__label = __sklib__to_string(label);
+int __sklib__bitmap_button__string_ref__bitmap__drawing_options(const __sklib_string label_text, __sklib_bitmap bmp, __sklib_drawing_options opts) {
+    string __skparam__label_text = __sklib__to_string(label_text);
     bitmap __skparam__bmp = __sklib__to_bitmap(bmp);
     drawing_options __skparam__opts = __sklib__to_drawing_options(opts);
-    bool __skreturn = bitmap_button(__skparam__label, __skparam__bmp, __skparam__opts);
+    bool __skreturn = bitmap_button(__skparam__label_text, __skparam__bmp, __skparam__opts);
     return __sklib__to_int(__skreturn);
 }
 int __sklib__button__string_ref__rectangle_ref(const __sklib_string text, const __sklib_rectangle rect) {
@@ -2379,10 +2379,10 @@ int __sklib__button__string_ref(const __sklib_string text) {
     bool __skreturn = button(__skparam__text);
     return __sklib__to_int(__skreturn);
 }
-int __sklib__button__string_ref__string_ref(const __sklib_string label, const __sklib_string text) {
-    string __skparam__label = __sklib__to_string(label);
+int __sklib__button__string_ref__string_ref(const __sklib_string label_text, const __sklib_string text) {
+    string __skparam__label_text = __sklib__to_string(label_text);
     string __skparam__text = __sklib__to_string(text);
-    bool __skreturn = button(__skparam__label, __skparam__text);
+    bool __skreturn = button(__skparam__label_text, __skparam__text);
     return __sklib__to_int(__skreturn);
 }
 int __sklib__checkbox__string_ref__bool_ref__rectangle_ref(const __sklib_string text, const int value, const __sklib_rectangle rect) {
@@ -2398,11 +2398,11 @@ int __sklib__checkbox__string_ref__bool_ref(const __sklib_string text, const int
     bool __skreturn = checkbox(__skparam__text, __skparam__value);
     return __sklib__to_int(__skreturn);
 }
-int __sklib__checkbox__string_ref__string_ref__bool_ref(const __sklib_string label, const __sklib_string text, const int value) {
-    string __skparam__label = __sklib__to_string(label);
+int __sklib__checkbox__string_ref__string_ref__bool_ref(const __sklib_string label_text, const __sklib_string text, const int value) {
+    string __skparam__label_text = __sklib__to_string(label_text);
     string __skparam__text = __sklib__to_string(text);
     bool __skparam__value = __sklib__to_bool(value);
-    bool __skreturn = checkbox(__skparam__label, __skparam__text, __skparam__value);
+    bool __skreturn = checkbox(__skparam__label_text, __skparam__text, __skparam__value);
     return __sklib__to_int(__skreturn);
 }
 __sklib_color __sklib__color_slider__color_ref__rectangle_ref(const __sklib_color clr, const __sklib_rectangle rect) {
@@ -2416,10 +2416,10 @@ __sklib_color __sklib__color_slider__color_ref(const __sklib_color clr) {
     color __skreturn = color_slider(__skparam__clr);
     return __sklib__to_sklib_color(__skreturn);
 }
-__sklib_color __sklib__color_slider__string_ref__color_ref(const __sklib_string label, const __sklib_color clr) {
-    string __skparam__label = __sklib__to_string(label);
+__sklib_color __sklib__color_slider__string_ref__color_ref(const __sklib_string label_text, const __sklib_color clr) {
+    string __skparam__label_text = __sklib__to_string(label_text);
     color __skparam__clr = __sklib__to_color(clr);
-    color __skreturn = color_slider(__skparam__label, __skparam__clr);
+    color __skreturn = color_slider(__skparam__label_text, __skparam__clr);
     return __sklib__to_sklib_color(__skreturn);
 }
 void __sklib__disable_interface() {
@@ -2443,9 +2443,9 @@ void __sklib__end_popup__string_ref(const __sklib_string name) {
     string __skparam__name = __sklib__to_string(name);
     end_popup(__skparam__name);
 }
-void __sklib__end_treenode__string_ref(const __sklib_string label) {
-    string __skparam__label = __sklib__to_string(label);
-    end_treenode(__skparam__label);
+void __sklib__end_treenode__string_ref(const __sklib_string label_text) {
+    string __skparam__label_text = __sklib__to_string(label_text);
+    end_treenode(__skparam__label_text);
 }
 void __sklib__enter_column() {
     enter_column();
@@ -2454,9 +2454,9 @@ int __sklib__get_interface_label_width() {
     int __skreturn = get_interface_label_width();
     return __sklib__to_int(__skreturn);
 }
-int __sklib__header__string_ref(const __sklib_string label) {
-    string __skparam__label = __sklib__to_string(label);
-    bool __skreturn = header(__skparam__label);
+int __sklib__header__string_ref(const __sklib_string label_text) {
+    string __skparam__label_text = __sklib__to_string(label_text);
+    bool __skreturn = header(__skparam__label_text);
     return __sklib__to_int(__skreturn);
 }
 __sklib_color __sklib__hsb_color_slider__color_ref__rectangle_ref(const __sklib_color clr, const __sklib_rectangle rect) {
@@ -2470,10 +2470,10 @@ __sklib_color __sklib__hsb_color_slider__color_ref(const __sklib_color clr) {
     color __skreturn = hsb_color_slider(__skparam__clr);
     return __sklib__to_sklib_color(__skreturn);
 }
-__sklib_color __sklib__hsb_color_slider__string_ref__color_ref(const __sklib_string label, const __sklib_color clr) {
-    string __skparam__label = __sklib__to_string(label);
+__sklib_color __sklib__hsb_color_slider__string_ref__color_ref(const __sklib_string label_text, const __sklib_color clr) {
+    string __skparam__label_text = __sklib__to_string(label_text);
     color __skparam__clr = __sklib__to_color(clr);
-    color __skreturn = hsb_color_slider(__skparam__label, __skparam__clr);
+    color __skreturn = hsb_color_slider(__skparam__label_text, __skparam__clr);
     return __sklib__to_sklib_color(__skreturn);
 }
 int __sklib__interface_enabled() {
@@ -2484,14 +2484,14 @@ void __sklib__interface_style_panel__rectangle_ref(const __sklib_rectangle initi
     rectangle __skparam__initial_rectangle = __sklib__to_rectangle(initial_rectangle);
     interface_style_panel(__skparam__initial_rectangle);
 }
-void __sklib__label__string_ref(const __sklib_string text) {
+void __sklib__label_element__string_ref(const __sklib_string text) {
     string __skparam__text = __sklib__to_string(text);
-    label(__skparam__text);
+    label_element(__skparam__text);
 }
-void __sklib__label__string_ref__rectangle_ref(const __sklib_string text, const __sklib_rectangle rect) {
+void __sklib__label_element__string_ref__rectangle_ref(const __sklib_string text, const __sklib_rectangle rect) {
     string __skparam__text = __sklib__to_string(text);
     rectangle __skparam__rect = __sklib__to_rectangle(rect);
-    label(__skparam__text, __skparam__rect);
+    label_element(__skparam__text, __skparam__rect);
 }
 int __sklib__last_element_changed() {
     bool __skreturn = last_element_changed();
@@ -2517,11 +2517,11 @@ float __sklib__number_box__float_ref__float(const float value, float step) {
     float __skreturn = number_box(__skparam__value, __skparam__step);
     return __sklib__to_float(__skreturn);
 }
-float __sklib__number_box__string_ref__float_ref__float(const __sklib_string label, const float value, float step) {
-    string __skparam__label = __sklib__to_string(label);
+float __sklib__number_box__string_ref__float_ref__float(const __sklib_string label_text, const float value, float step) {
+    string __skparam__label_text = __sklib__to_string(label_text);
     float __skparam__value = __sklib__to_float(value);
     float __skparam__step = __sklib__to_float(step);
-    float __skreturn = number_box(__skparam__label, __skparam__value, __skparam__step);
+    float __skreturn = number_box(__skparam__label_text, __skparam__value, __skparam__step);
     return __sklib__to_float(__skreturn);
 }
 void __sklib__open_popup__string_ref(const __sklib_string name) {
@@ -2640,12 +2640,12 @@ float __sklib__slider__float_ref__float__float(const float value, float min_valu
     float __skreturn = slider(__skparam__value, __skparam__min_value, __skparam__max_value);
     return __sklib__to_float(__skreturn);
 }
-float __sklib__slider__string_ref__float_ref__float__float(const __sklib_string label, const float value, float min_value, float max_value) {
-    string __skparam__label = __sklib__to_string(label);
+float __sklib__slider__string_ref__float_ref__float__float(const __sklib_string label_text, const float value, float min_value, float max_value) {
+    string __skparam__label_text = __sklib__to_string(label_text);
     float __skparam__value = __sklib__to_float(value);
     float __skparam__min_value = __sklib__to_float(min_value);
     float __skparam__max_value = __sklib__to_float(max_value);
-    float __skreturn = slider(__skparam__label, __skparam__value, __skparam__min_value, __skparam__max_value);
+    float __skreturn = slider(__skparam__label_text, __skparam__value, __skparam__min_value, __skparam__max_value);
     return __sklib__to_float(__skreturn);
 }
 void __sklib__split_into_columns__int(int count) {
@@ -2686,9 +2686,9 @@ int __sklib__start_popup__string_ref(const __sklib_string name) {
     bool __skreturn = start_popup(__skparam__name);
     return __sklib__to_int(__skreturn);
 }
-int __sklib__start_treenode__string_ref(const __sklib_string label) {
-    string __skparam__label = __sklib__to_string(label);
-    bool __skreturn = start_treenode(__skparam__label);
+int __sklib__start_treenode__string_ref(const __sklib_string label_text) {
+    string __skparam__label_text = __sklib__to_string(label_text);
+    bool __skreturn = start_treenode(__skparam__label_text);
     return __sklib__to_int(__skreturn);
 }
 __sklib_string __sklib__text_box__string_ref(const __sklib_string value) {
@@ -2702,10 +2702,10 @@ __sklib_string __sklib__text_box__string_ref__rectangle_ref(const __sklib_string
     string __skreturn = text_box(__skparam__value, __skparam__rect);
     return __sklib__to_sklib_string(__skreturn);
 }
-__sklib_string __sklib__text_box__string_ref__string_ref(const __sklib_string label, const __sklib_string value) {
-    string __skparam__label = __sklib__to_string(label);
+__sklib_string __sklib__text_box__string_ref__string_ref(const __sklib_string label_text, const __sklib_string value) {
+    string __skparam__label_text = __sklib__to_string(label_text);
     string __skparam__value = __sklib__to_string(value);
-    string __skreturn = text_box(__skparam__label, __skparam__value);
+    string __skreturn = text_box(__skparam__label_text, __skparam__value);
     return __sklib__to_sklib_string(__skreturn);
 }
 __sklib_json __sklib__create_json() {

@@ -2412,19 +2412,19 @@ bool bitmap_button(bitmap bmp, drawing_options opts) {
     int __skreturn = __sklib__bitmap_button__bitmap__drawing_options(__skparam__bmp, __skparam__opts);
     return __skadapter__to_bool(__skreturn);
 }
-bool bitmap_button(const string &label, bitmap bmp) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
+bool bitmap_button(const string &label_text, bitmap bmp) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
     __sklib_bitmap __skparam__bmp = __skadapter__to_sklib_bitmap(bmp);
-    int __skreturn = __sklib__bitmap_button__string_ref__bitmap(__skparam__label, __skparam__bmp);
-    __skadapter__free__sklib_string(__skparam__label);
+    int __skreturn = __sklib__bitmap_button__string_ref__bitmap(__skparam__label_text, __skparam__bmp);
+    __skadapter__free__sklib_string(__skparam__label_text);
     return __skadapter__to_bool(__skreturn);
 }
-bool bitmap_button(const string &label, bitmap bmp, drawing_options opts) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
+bool bitmap_button(const string &label_text, bitmap bmp, drawing_options opts) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
     __sklib_bitmap __skparam__bmp = __skadapter__to_sklib_bitmap(bmp);
     __sklib_drawing_options __skparam__opts = __skadapter__to_sklib_drawing_options(opts);
-    int __skreturn = __sklib__bitmap_button__string_ref__bitmap__drawing_options(__skparam__label, __skparam__bmp, __skparam__opts);
-    __skadapter__free__sklib_string(__skparam__label);
+    int __skreturn = __sklib__bitmap_button__string_ref__bitmap__drawing_options(__skparam__label_text, __skparam__bmp, __skparam__opts);
+    __skadapter__free__sklib_string(__skparam__label_text);
     return __skadapter__to_bool(__skreturn);
 }
 bool button(const string &text, const rectangle &rect) {
@@ -2440,11 +2440,11 @@ bool button(const string &text) {
     __skadapter__free__sklib_string(__skparam__text);
     return __skadapter__to_bool(__skreturn);
 }
-bool button(const string &label, const string &text) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
+bool button(const string &label_text, const string &text) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
     const __sklib_string __skparam__text = __skadapter__to_sklib_string(text);
-    int __skreturn = __sklib__button__string_ref__string_ref(__skparam__label, __skparam__text);
-    __skadapter__free__sklib_string(__skparam__label);
+    int __skreturn = __sklib__button__string_ref__string_ref(__skparam__label_text, __skparam__text);
+    __skadapter__free__sklib_string(__skparam__label_text);
     __skadapter__free__sklib_string(__skparam__text);
     return __skadapter__to_bool(__skreturn);
 }
@@ -2463,12 +2463,12 @@ bool checkbox(const string &text, const bool &value) {
     __skadapter__free__sklib_string(__skparam__text);
     return __skadapter__to_bool(__skreturn);
 }
-bool checkbox(const string &label, const string &text, const bool &value) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
+bool checkbox(const string &label_text, const string &text, const bool &value) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
     const __sklib_string __skparam__text = __skadapter__to_sklib_string(text);
     const int __skparam__value = __skadapter__to_int(value);
-    int __skreturn = __sklib__checkbox__string_ref__string_ref__bool_ref(__skparam__label, __skparam__text, __skparam__value);
-    __skadapter__free__sklib_string(__skparam__label);
+    int __skreturn = __sklib__checkbox__string_ref__string_ref__bool_ref(__skparam__label_text, __skparam__text, __skparam__value);
+    __skadapter__free__sklib_string(__skparam__label_text);
     __skadapter__free__sklib_string(__skparam__text);
     return __skadapter__to_bool(__skreturn);
 }
@@ -2483,11 +2483,11 @@ color color_slider(const color &clr) {
     __sklib_color __skreturn = __sklib__color_slider__color_ref(__skparam__clr);
     return __skadapter__to_color(__skreturn);
 }
-color color_slider(const string &label, const color &clr) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
+color color_slider(const string &label_text, const color &clr) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
     const __sklib_color __skparam__clr = __skadapter__to_sklib_color(clr);
-    __sklib_color __skreturn = __sklib__color_slider__string_ref__color_ref(__skparam__label, __skparam__clr);
-    __skadapter__free__sklib_string(__skparam__label);
+    __sklib_color __skreturn = __sklib__color_slider__string_ref__color_ref(__skparam__label_text, __skparam__clr);
+    __skadapter__free__sklib_string(__skparam__label_text);
     return __skadapter__to_color(__skreturn);
 }
 void disable_interface() {
@@ -2514,10 +2514,10 @@ void end_popup(const string &name) {
     __sklib__end_popup__string_ref(__skparam__name);
     __skadapter__free__sklib_string(__skparam__name);
 }
-void end_treenode(const string &label) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
-    __sklib__end_treenode__string_ref(__skparam__label);
-    __skadapter__free__sklib_string(__skparam__label);
+void end_treenode(const string &label_text) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
+    __sklib__end_treenode__string_ref(__skparam__label_text);
+    __skadapter__free__sklib_string(__skparam__label_text);
 }
 void enter_column() {
     __sklib__enter_column();
@@ -2526,10 +2526,10 @@ int get_interface_label_width() {
     int __skreturn = __sklib__get_interface_label_width();
     return __skadapter__to_int(__skreturn);
 }
-bool header(const string &label) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
-    int __skreturn = __sklib__header__string_ref(__skparam__label);
-    __skadapter__free__sklib_string(__skparam__label);
+bool header(const string &label_text) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
+    int __skreturn = __sklib__header__string_ref(__skparam__label_text);
+    __skadapter__free__sklib_string(__skparam__label_text);
     return __skadapter__to_bool(__skreturn);
 }
 color hsb_color_slider(const color &clr, const rectangle &rect) {
@@ -2543,11 +2543,11 @@ color hsb_color_slider(const color &clr) {
     __sklib_color __skreturn = __sklib__hsb_color_slider__color_ref(__skparam__clr);
     return __skadapter__to_color(__skreturn);
 }
-color hsb_color_slider(const string &label, const color &clr) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
+color hsb_color_slider(const string &label_text, const color &clr) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
     const __sklib_color __skparam__clr = __skadapter__to_sklib_color(clr);
-    __sklib_color __skreturn = __sklib__hsb_color_slider__string_ref__color_ref(__skparam__label, __skparam__clr);
-    __skadapter__free__sklib_string(__skparam__label);
+    __sklib_color __skreturn = __sklib__hsb_color_slider__string_ref__color_ref(__skparam__label_text, __skparam__clr);
+    __skadapter__free__sklib_string(__skparam__label_text);
     return __skadapter__to_color(__skreturn);
 }
 bool interface_enabled() {
@@ -2558,15 +2558,15 @@ void interface_style_panel(const rectangle &initial_rectangle) {
     const __sklib_rectangle __skparam__initial_rectangle = __skadapter__to_sklib_rectangle(initial_rectangle);
     __sklib__interface_style_panel__rectangle_ref(__skparam__initial_rectangle);
 }
-void label(const string &text) {
+void label_element(const string &text) {
     const __sklib_string __skparam__text = __skadapter__to_sklib_string(text);
-    __sklib__label__string_ref(__skparam__text);
+    __sklib__label_element__string_ref(__skparam__text);
     __skadapter__free__sklib_string(__skparam__text);
 }
-void label(const string &text, const rectangle &rect) {
+void label_element(const string &text, const rectangle &rect) {
     const __sklib_string __skparam__text = __skadapter__to_sklib_string(text);
     const __sklib_rectangle __skparam__rect = __skadapter__to_sklib_rectangle(rect);
-    __sklib__label__string_ref__rectangle_ref(__skparam__text, __skparam__rect);
+    __sklib__label_element__string_ref__rectangle_ref(__skparam__text, __skparam__rect);
     __skadapter__free__sklib_string(__skparam__text);
 }
 bool last_element_changed() {
@@ -2593,12 +2593,12 @@ float number_box(const float &value, float step) {
     float __skreturn = __sklib__number_box__float_ref__float(__skparam__value, __skparam__step);
     return __skadapter__to_float(__skreturn);
 }
-float number_box(const string &label, const float &value, float step) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
+float number_box(const string &label_text, const float &value, float step) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
     const float __skparam__value = __skadapter__to_float(value);
     float __skparam__step = __skadapter__to_float(step);
-    float __skreturn = __sklib__number_box__string_ref__float_ref__float(__skparam__label, __skparam__value, __skparam__step);
-    __skadapter__free__sklib_string(__skparam__label);
+    float __skreturn = __sklib__number_box__string_ref__float_ref__float(__skparam__label_text, __skparam__value, __skparam__step);
+    __skadapter__free__sklib_string(__skparam__label_text);
     return __skadapter__to_float(__skreturn);
 }
 void open_popup(const string &name) {
@@ -2721,13 +2721,13 @@ float slider(const float &value, float min_value, float max_value) {
     float __skreturn = __sklib__slider__float_ref__float__float(__skparam__value, __skparam__min_value, __skparam__max_value);
     return __skadapter__to_float(__skreturn);
 }
-float slider(const string &label, const float &value, float min_value, float max_value) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
+float slider(const string &label_text, const float &value, float min_value, float max_value) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
     const float __skparam__value = __skadapter__to_float(value);
     float __skparam__min_value = __skadapter__to_float(min_value);
     float __skparam__max_value = __skadapter__to_float(max_value);
-    float __skreturn = __sklib__slider__string_ref__float_ref__float__float(__skparam__label, __skparam__value, __skparam__min_value, __skparam__max_value);
-    __skadapter__free__sklib_string(__skparam__label);
+    float __skreturn = __sklib__slider__string_ref__float_ref__float__float(__skparam__label_text, __skparam__value, __skparam__min_value, __skparam__max_value);
+    __skadapter__free__sklib_string(__skparam__label_text);
     return __skadapter__to_float(__skreturn);
 }
 void split_into_columns(int count) {
@@ -2772,10 +2772,10 @@ bool start_popup(const string &name) {
     __skadapter__free__sklib_string(__skparam__name);
     return __skadapter__to_bool(__skreturn);
 }
-bool start_treenode(const string &label) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
-    int __skreturn = __sklib__start_treenode__string_ref(__skparam__label);
-    __skadapter__free__sklib_string(__skparam__label);
+bool start_treenode(const string &label_text) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
+    int __skreturn = __sklib__start_treenode__string_ref(__skparam__label_text);
+    __skadapter__free__sklib_string(__skparam__label_text);
     return __skadapter__to_bool(__skreturn);
 }
 string text_box(const string &value) {
@@ -2791,11 +2791,11 @@ string text_box(const string &value, const rectangle &rect) {
     __skadapter__free__sklib_string(__skparam__value);
     return __skadapter__to_string(__skreturn);
 }
-string text_box(const string &label, const string &value) {
-    const __sklib_string __skparam__label = __skadapter__to_sklib_string(label);
+string text_box(const string &label_text, const string &value) {
+    const __sklib_string __skparam__label_text = __skadapter__to_sklib_string(label_text);
     const __sklib_string __skparam__value = __skadapter__to_sklib_string(value);
-    __sklib_string __skreturn = __sklib__text_box__string_ref__string_ref(__skparam__label, __skparam__value);
-    __skadapter__free__sklib_string(__skparam__label);
+    __sklib_string __skreturn = __sklib__text_box__string_ref__string_ref(__skparam__label_text, __skparam__value);
+    __skadapter__free__sklib_string(__skparam__label_text);
     __skadapter__free__sklib_string(__skparam__value);
     return __skadapter__to_string(__skreturn);
 }

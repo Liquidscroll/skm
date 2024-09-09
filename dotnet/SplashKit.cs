@@ -2368,10 +2368,10 @@ namespace SplashKitSDK
     private static extern int __sklib__bitmap_button__bitmap__drawing_options(__sklib_ptr bmp, __sklib_drawing_options opts);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__bitmap_button__string_ref__bitmap", CharSet=CharSet.Ansi)]
-    private static extern int __sklib__bitmap_button__string_ref__bitmap(__sklib_string label, __sklib_ptr bmp);
+    private static extern int __sklib__bitmap_button__string_ref__bitmap(__sklib_string labelText, __sklib_ptr bmp);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__bitmap_button__string_ref__bitmap__drawing_options", CharSet=CharSet.Ansi)]
-    private static extern int __sklib__bitmap_button__string_ref__bitmap__drawing_options(__sklib_string label, __sklib_ptr bmp, __sklib_drawing_options opts);
+    private static extern int __sklib__bitmap_button__string_ref__bitmap__drawing_options(__sklib_string labelText, __sklib_ptr bmp, __sklib_drawing_options opts);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__button__string_ref__rectangle_ref", CharSet=CharSet.Ansi)]
     private static extern int __sklib__button__string_ref__rectangle_ref(__sklib_string text, __sklib_rectangle rect);
@@ -2380,7 +2380,7 @@ namespace SplashKitSDK
     private static extern int __sklib__button__string_ref(__sklib_string text);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__button__string_ref__string_ref", CharSet=CharSet.Ansi)]
-    private static extern int __sklib__button__string_ref__string_ref(__sklib_string label, __sklib_string text);
+    private static extern int __sklib__button__string_ref__string_ref(__sklib_string labelText, __sklib_string text);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__checkbox__string_ref__bool_ref__rectangle_ref", CharSet=CharSet.Ansi)]
     private static extern int __sklib__checkbox__string_ref__bool_ref__rectangle_ref(__sklib_string text, int value, __sklib_rectangle rect);
@@ -2389,7 +2389,7 @@ namespace SplashKitSDK
     private static extern int __sklib__checkbox__string_ref__bool_ref(__sklib_string text, int value);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__checkbox__string_ref__string_ref__bool_ref", CharSet=CharSet.Ansi)]
-    private static extern int __sklib__checkbox__string_ref__string_ref__bool_ref(__sklib_string label, __sklib_string text, int value);
+    private static extern int __sklib__checkbox__string_ref__string_ref__bool_ref(__sklib_string labelText, __sklib_string text, int value);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__color_slider__color_ref__rectangle_ref", CharSet=CharSet.Ansi)]
     private static extern __sklib_color __sklib__color_slider__color_ref__rectangle_ref(__sklib_color clr, __sklib_rectangle rect);
@@ -2398,7 +2398,7 @@ namespace SplashKitSDK
     private static extern __sklib_color __sklib__color_slider__color_ref(__sklib_color clr);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__color_slider__string_ref__color_ref", CharSet=CharSet.Ansi)]
-    private static extern __sklib_color __sklib__color_slider__string_ref__color_ref(__sklib_string label, __sklib_color clr);
+    private static extern __sklib_color __sklib__color_slider__string_ref__color_ref(__sklib_string labelText, __sklib_color clr);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__disable_interface", CharSet=CharSet.Ansi)]
     private static extern void __sklib__disable_interface();
@@ -2419,7 +2419,7 @@ namespace SplashKitSDK
     private static extern void __sklib__end_popup__string_ref(__sklib_string name);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__end_treenode__string_ref", CharSet=CharSet.Ansi)]
-    private static extern void __sklib__end_treenode__string_ref(__sklib_string label);
+    private static extern void __sklib__end_treenode__string_ref(__sklib_string labelText);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__enter_column", CharSet=CharSet.Ansi)]
     private static extern void __sklib__enter_column();
@@ -2428,7 +2428,7 @@ namespace SplashKitSDK
     private static extern int __sklib__get_interface_label_width();
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__header__string_ref", CharSet=CharSet.Ansi)]
-    private static extern int __sklib__header__string_ref(__sklib_string label);
+    private static extern int __sklib__header__string_ref(__sklib_string labelText);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__hsb_color_slider__color_ref__rectangle_ref", CharSet=CharSet.Ansi)]
     private static extern __sklib_color __sklib__hsb_color_slider__color_ref__rectangle_ref(__sklib_color clr, __sklib_rectangle rect);
@@ -2437,7 +2437,7 @@ namespace SplashKitSDK
     private static extern __sklib_color __sklib__hsb_color_slider__color_ref(__sklib_color clr);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__hsb_color_slider__string_ref__color_ref", CharSet=CharSet.Ansi)]
-    private static extern __sklib_color __sklib__hsb_color_slider__string_ref__color_ref(__sklib_string label, __sklib_color clr);
+    private static extern __sklib_color __sklib__hsb_color_slider__string_ref__color_ref(__sklib_string labelText, __sklib_color clr);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__interface_enabled", CharSet=CharSet.Ansi)]
     private static extern int __sklib__interface_enabled();
@@ -2445,11 +2445,11 @@ namespace SplashKitSDK
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__interface_style_panel__rectangle_ref", CharSet=CharSet.Ansi)]
     private static extern void __sklib__interface_style_panel__rectangle_ref(__sklib_rectangle initialRectangle);
 
-    [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__label__string_ref", CharSet=CharSet.Ansi)]
-    private static extern void __sklib__label__string_ref(__sklib_string text);
+    [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__label_element__string_ref", CharSet=CharSet.Ansi)]
+    private static extern void __sklib__label_element__string_ref(__sklib_string text);
 
-    [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__label__string_ref__rectangle_ref", CharSet=CharSet.Ansi)]
-    private static extern void __sklib__label__string_ref__rectangle_ref(__sklib_string text, __sklib_rectangle rect);
+    [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__label_element__string_ref__rectangle_ref", CharSet=CharSet.Ansi)]
+    private static extern void __sklib__label_element__string_ref__rectangle_ref(__sklib_string text, __sklib_rectangle rect);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__last_element_changed", CharSet=CharSet.Ansi)]
     private static extern int __sklib__last_element_changed();
@@ -2467,7 +2467,7 @@ namespace SplashKitSDK
     private static extern float __sklib__number_box__float_ref__float(float value, float step);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__number_box__string_ref__float_ref__float", CharSet=CharSet.Ansi)]
-    private static extern float __sklib__number_box__string_ref__float_ref__float(__sklib_string label, float value, float step);
+    private static extern float __sklib__number_box__string_ref__float_ref__float(__sklib_string labelText, float value, float step);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__open_popup__string_ref", CharSet=CharSet.Ansi)]
     private static extern void __sklib__open_popup__string_ref(__sklib_string name);
@@ -2542,7 +2542,7 @@ namespace SplashKitSDK
     private static extern float __sklib__slider__float_ref__float__float(float value, float minValue, float maxValue);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__slider__string_ref__float_ref__float__float", CharSet=CharSet.Ansi)]
-    private static extern float __sklib__slider__string_ref__float_ref__float__float(__sklib_string label, float value, float minValue, float maxValue);
+    private static extern float __sklib__slider__string_ref__float_ref__float__float(__sklib_string labelText, float value, float minValue, float maxValue);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__split_into_columns__int", CharSet=CharSet.Ansi)]
     private static extern void __sklib__split_into_columns__int(int count);
@@ -2569,7 +2569,7 @@ namespace SplashKitSDK
     private static extern int __sklib__start_popup__string_ref(__sklib_string name);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__start_treenode__string_ref", CharSet=CharSet.Ansi)]
-    private static extern int __sklib__start_treenode__string_ref(__sklib_string label);
+    private static extern int __sklib__start_treenode__string_ref(__sklib_string labelText);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__text_box__string_ref", CharSet=CharSet.Ansi)]
     private static extern __sklib_string __sklib__text_box__string_ref(__sklib_string value);
@@ -2578,7 +2578,7 @@ namespace SplashKitSDK
     private static extern __sklib_string __sklib__text_box__string_ref__rectangle_ref(__sklib_string value, __sklib_rectangle rect);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__text_box__string_ref__string_ref", CharSet=CharSet.Ansi)]
-    private static extern __sklib_string __sklib__text_box__string_ref__string_ref(__sklib_string label, __sklib_string value);
+    private static extern __sklib_string __sklib__text_box__string_ref__string_ref(__sklib_string labelText, __sklib_string value);
 
     [DllImport("SplashKit", CallingConvention=CallingConvention.Cdecl, EntryPoint="__sklib__create_json", CharSet=CharSet.Ansi)]
     private static extern __sklib_ptr __sklib__create_json();
@@ -8644,28 +8644,28 @@ namespace SplashKitSDK
       __skreturn = __sklib__bitmap_button__bitmap__drawing_options(__skparam__bmp, __skparam__opts);
       return __skadapter__to_bool(__skreturn);
     }
-    public static bool BitmapButton(string label, Bitmap bmp)
+    public static bool BitmapButton(string labelText, Bitmap bmp)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       __sklib_ptr __skparam__bmp;
       int __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
       __skparam__bmp = __skadapter__to_sklib_bitmap(bmp);
-      __skreturn = __sklib__bitmap_button__string_ref__bitmap(__skparam__label, __skparam__bmp);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skreturn = __sklib__bitmap_button__string_ref__bitmap(__skparam__label_text, __skparam__bmp);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
       return __skadapter__to_bool(__skreturn);
     }
-    public static bool BitmapButton(string label, Bitmap bmp, DrawingOptions opts)
+    public static bool BitmapButton(string labelText, Bitmap bmp, DrawingOptions opts)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       __sklib_ptr __skparam__bmp;
       __sklib_drawing_options __skparam__opts;
       int __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
       __skparam__bmp = __skadapter__to_sklib_bitmap(bmp);
       __skparam__opts = __skadapter__to_sklib_drawing_options(opts);
-      __skreturn = __sklib__bitmap_button__string_ref__bitmap__drawing_options(__skparam__label, __skparam__bmp, __skparam__opts);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skreturn = __sklib__bitmap_button__string_ref__bitmap__drawing_options(__skparam__label_text, __skparam__bmp, __skparam__opts);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
       return __skadapter__to_bool(__skreturn);
     }
     public static bool Button(string text, Rectangle rect)
@@ -8688,15 +8688,15 @@ namespace SplashKitSDK
     __skadapter__free__sklib_string(ref __skparam__text);
       return __skadapter__to_bool(__skreturn);
     }
-    public static bool Button(string label, string text)
+    public static bool Button(string labelText, string text)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       __sklib_string __skparam__text;
       int __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
       __skparam__text = __skadapter__to_sklib_string(text);
-      __skreturn = __sklib__button__string_ref__string_ref(__skparam__label, __skparam__text);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skreturn = __sklib__button__string_ref__string_ref(__skparam__label_text, __skparam__text);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
     __skadapter__free__sklib_string(ref __skparam__text);
       return __skadapter__to_bool(__skreturn);
     }
@@ -8724,17 +8724,17 @@ namespace SplashKitSDK
     __skadapter__free__sklib_string(ref __skparam__text);
       return __skadapter__to_bool(__skreturn);
     }
-    public static bool Checkbox(string label, string text, bool value)
+    public static bool Checkbox(string labelText, string text, bool value)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       __sklib_string __skparam__text;
       int __skparam__value;
       int __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
       __skparam__text = __skadapter__to_sklib_string(text);
       __skparam__value = __skadapter__to_sklib_bool(value);
-      __skreturn = __sklib__checkbox__string_ref__string_ref__bool_ref(__skparam__label, __skparam__text, __skparam__value);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skreturn = __sklib__checkbox__string_ref__string_ref__bool_ref(__skparam__label_text, __skparam__text, __skparam__value);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
     __skadapter__free__sklib_string(ref __skparam__text);
       return __skadapter__to_bool(__skreturn);
     }
@@ -8756,15 +8756,15 @@ namespace SplashKitSDK
       __skreturn = __sklib__color_slider__color_ref(__skparam__clr);
       return __skadapter__to_color(__skreturn);
     }
-    public static Color ColorSlider(string label, Color clr)
+    public static Color ColorSlider(string labelText, Color clr)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       __sklib_color __skparam__clr;
       __sklib_color __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
       __skparam__clr = __skadapter__to_sklib_color(clr);
-      __skreturn = __sklib__color_slider__string_ref__color_ref(__skparam__label, __skparam__clr);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skreturn = __sklib__color_slider__string_ref__color_ref(__skparam__label_text, __skparam__clr);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
       return __skadapter__to_color(__skreturn);
     }
     public static void DisableInterface()
@@ -8800,12 +8800,12 @@ namespace SplashKitSDK
       __sklib__end_popup__string_ref(__skparam__name);
     __skadapter__free__sklib_string(ref __skparam__name);
     }
-    public static void EndTreenode(string label)
+    public static void EndTreenode(string labelText)
     {
-      __sklib_string __skparam__label;
-      __skparam__label = __skadapter__to_sklib_string(label);
-      __sklib__end_treenode__string_ref(__skparam__label);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __sklib_string __skparam__label_text;
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
+      __sklib__end_treenode__string_ref(__skparam__label_text);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
     }
     public static void EnterColumn()
     {
@@ -8817,13 +8817,13 @@ namespace SplashKitSDK
       __skreturn = __sklib__get_interface_label_width();
       return __skadapter__to_int(__skreturn);
     }
-    public static bool Header(string label)
+    public static bool Header(string labelText)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       int __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
-      __skreturn = __sklib__header__string_ref(__skparam__label);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
+      __skreturn = __sklib__header__string_ref(__skparam__label_text);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
       return __skadapter__to_bool(__skreturn);
     }
     public static Color HSBColorSlider(Color clr, Rectangle rect)
@@ -8844,15 +8844,15 @@ namespace SplashKitSDK
       __skreturn = __sklib__hsb_color_slider__color_ref(__skparam__clr);
       return __skadapter__to_color(__skreturn);
     }
-    public static Color HSBColorSlider(string label, Color clr)
+    public static Color HSBColorSlider(string labelText, Color clr)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       __sklib_color __skparam__clr;
       __sklib_color __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
       __skparam__clr = __skadapter__to_sklib_color(clr);
-      __skreturn = __sklib__hsb_color_slider__string_ref__color_ref(__skparam__label, __skparam__clr);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skreturn = __sklib__hsb_color_slider__string_ref__color_ref(__skparam__label_text, __skparam__clr);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
       return __skadapter__to_color(__skreturn);
     }
     public static bool InterfaceEnabled()
@@ -8867,20 +8867,20 @@ namespace SplashKitSDK
       __skparam__initial_rectangle = __skadapter__to_sklib_rectangle(initialRectangle);
       __sklib__interface_style_panel__rectangle_ref(__skparam__initial_rectangle);
     }
-    public static void Label(string text)
+    public static void LabelElement(string text)
     {
       __sklib_string __skparam__text;
       __skparam__text = __skadapter__to_sklib_string(text);
-      __sklib__label__string_ref(__skparam__text);
+      __sklib__label_element__string_ref(__skparam__text);
     __skadapter__free__sklib_string(ref __skparam__text);
     }
-    public static void Label(string text, Rectangle rect)
+    public static void LabelElement(string text, Rectangle rect)
     {
       __sklib_string __skparam__text;
       __sklib_rectangle __skparam__rect;
       __skparam__text = __skadapter__to_sklib_string(text);
       __skparam__rect = __skadapter__to_sklib_rectangle(rect);
-      __sklib__label__string_ref__rectangle_ref(__skparam__text, __skparam__rect);
+      __sklib__label_element__string_ref__rectangle_ref(__skparam__text, __skparam__rect);
     __skadapter__free__sklib_string(ref __skparam__text);
     }
     public static bool LastElementChanged()
@@ -8921,17 +8921,17 @@ namespace SplashKitSDK
       __skreturn = __sklib__number_box__float_ref__float(__skparam__value, __skparam__step);
       return __skadapter__to_float(__skreturn);
     }
-    public static float NumberBox(string label, float value, float step)
+    public static float NumberBox(string labelText, float value, float step)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       float __skparam__value;
       float __skparam__step;
       float __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
       __skparam__value = __skadapter__to_sklib_float(value);
       __skparam__step = __skadapter__to_sklib_float(step);
-      __skreturn = __sklib__number_box__string_ref__float_ref__float(__skparam__label, __skparam__value, __skparam__step);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skreturn = __sklib__number_box__string_ref__float_ref__float(__skparam__label_text, __skparam__value, __skparam__step);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
       return __skadapter__to_float(__skreturn);
     }
     public static void OpenPopup(string name)
@@ -9122,19 +9122,19 @@ namespace SplashKitSDK
       __skreturn = __sklib__slider__float_ref__float__float(__skparam__value, __skparam__min_value, __skparam__max_value);
       return __skadapter__to_float(__skreturn);
     }
-    public static float Slider(string label, float value, float minValue, float maxValue)
+    public static float Slider(string labelText, float value, float minValue, float maxValue)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       float __skparam__value;
       float __skparam__min_value;
       float __skparam__max_value;
       float __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
       __skparam__value = __skadapter__to_sklib_float(value);
       __skparam__min_value = __skadapter__to_sklib_float(minValue);
       __skparam__max_value = __skadapter__to_sklib_float(maxValue);
-      __skreturn = __sklib__slider__string_ref__float_ref__float__float(__skparam__label, __skparam__value, __skparam__min_value, __skparam__max_value);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skreturn = __sklib__slider__string_ref__float_ref__float__float(__skparam__label_text, __skparam__value, __skparam__min_value, __skparam__max_value);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
       return __skadapter__to_float(__skreturn);
     }
     public static void SplitIntoColumns(int count)
@@ -9201,13 +9201,13 @@ namespace SplashKitSDK
     __skadapter__free__sklib_string(ref __skparam__name);
       return __skadapter__to_bool(__skreturn);
     }
-    public static bool StartTreenode(string label)
+    public static bool StartTreenode(string labelText)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       int __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
-      __skreturn = __sklib__start_treenode__string_ref(__skparam__label);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
+      __skreturn = __sklib__start_treenode__string_ref(__skparam__label_text);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
       return __skadapter__to_bool(__skreturn);
     }
     public static string TextBox(string value)
@@ -9230,15 +9230,15 @@ namespace SplashKitSDK
     __skadapter__free__sklib_string(ref __skparam__value);
       return __skadapter__to_string(__skreturn);
     }
-    public static string TextBox(string label, string value)
+    public static string TextBox(string labelText, string value)
     {
-      __sklib_string __skparam__label;
+      __sklib_string __skparam__label_text;
       __sklib_string __skparam__value;
       __sklib_string __skreturn;
-      __skparam__label = __skadapter__to_sklib_string(label);
+      __skparam__label_text = __skadapter__to_sklib_string(labelText);
       __skparam__value = __skadapter__to_sklib_string(value);
-      __skreturn = __sklib__text_box__string_ref__string_ref(__skparam__label, __skparam__value);
-    __skadapter__free__sklib_string(ref __skparam__label);
+      __skreturn = __sklib__text_box__string_ref__string_ref(__skparam__label_text, __skparam__value);
+    __skadapter__free__sklib_string(ref __skparam__label_text);
     __skadapter__free__sklib_string(ref __skparam__value);
       return __skadapter__to_string(__skreturn);
     }
